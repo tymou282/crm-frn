@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Клиенты</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<h1>Клиенты</h1>
+<a href="tasks.html" class="btn">Задачи</a>
+<a href="login.html" class="btn">Выйти</a>
+
+
+<h2>Добавить клиента</h2>
+
+
+<div class="card">
+<input id="c_name" placeholder="Имя">
+<input id="c_phone" placeholder="Телефон">
+<input id="c_email" placeholder="Email">
+<input id="c_company" placeholder="Компания">
+<textarea id="c_notes" placeholder="Заметки"></textarea>
+<button onclick="addClient()" class="btn">Добавить</button>
+</div>
+
+
+<h2>Список клиентов</h2>
+<div id="client_list"></div>
+
+
+<script src="js/main.js"></script>
+<script>loadClients();</script>
+</body>
+</html>

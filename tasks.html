@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Задачи</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+<h1>Задачи</h1>
+<a href="clients.html" class="btn">Клиенты</a>
+<a href="login.html" class="btn">Выйти</a>
+
+
+<h2>Добавить задачу</h2>
+
+
+<div class="card">
+<input id="t_title" placeholder="Заголовок">
+<textarea id="t_desc" placeholder="Описание"></textarea>
+<input id="t_status" placeholder="Статус">
+<input id="t_assigned" placeholder="Ответственный">
+<input id="t_due" type="date">
+<button onclick="addTask()" class="btn">Добавить</button>
+</div>
+
+
+<h2>Список задач</h2>
+<div id="task_list"></div>
+
+
+<script src="js/main.js"></script>
+<script>loadTasks();</script>
+</body>
+</html>
