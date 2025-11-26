@@ -236,73 +236,53 @@ body.dark .section.alt {
 body.dark .feature-card {
     background: #2d2f33;
     co
-/* ============ LOGIN PAGE ============ */
+/* LOGIN */
 
 .login-page {
+    min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    padding: 40px 20px;
     background: linear-gradient(135deg, #3c8ce7, #00eaff);
-}
-
-.login-container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
 }
 
 .login-card {
     background: #fff;
-    padding: 35px 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,.18);
     text-align: center;
-}
-
-.login-card h2 {
-    margin-bottom: 25px;
-    font-size: 1.7rem;
 }
 
 .input {
     width: 100%;
-    padding: 12px 14px;
+    padding: 12px;
     margin: 10px 0;
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1rem;
-    transition: .2s;
-}
-
-.input:focus {
-    outline: none;
-    border-color: #3c8ce7;
-    box-shadow: 0 0 6px rgba(60,140,231,.4);
 }
 
 .login-btn {
     width: 100%;
-    padding: 12px;
     margin-top: 15px;
-    font-size: 1.1rem;
-    border-radius: 8px;
 }
 
-/* Подсказки */
-.login-hint {
-    margin-top: 18px;
-    opacity: .8;
-    font-size: .9rem;
+/* DARK THEME FIX */
+body.dark .login-card {
+    background: #26272a;
+    color: #eee;
 }
 
-.hint-link {
-    color: #0077ff;
-    text-decoration: none;
+body.dark .input {
+    background: #2f3033;
+    border-color: #555;
+    color: #fff;
 }
-.hint-link:hover {
-    text-decoration: underline;
-}
+
 
 /* ========= ТЁМНАЯ ТЕМА ========= */
 
@@ -332,4 +312,5 @@ body.dark .login-hint {
 body.dark .hint-link {
     color: #4ca3ff;
 }
+
 
