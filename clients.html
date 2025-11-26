@@ -2,20 +2,17 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Клиенты</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body onload="loadClients()">
 
 <h1>Клиенты</h1>
 <a href="tasks.html" class="btn">Задачи</a>
-<a href="login.html" class="btn">Выйти</a>
-
+<a href="#" class="btn" onclick="logout()">Выйти</a>
 
 <h2>Добавить клиента</h2>
-
-
 <div class="card">
 <input id="c_name" placeholder="Имя">
 <input id="c_phone" placeholder="Телефон">
@@ -25,12 +22,9 @@
 <button onclick="addClient()" class="btn">Добавить</button>
 </div>
 
-
 <h2>Список клиентов</h2>
 <div id="client_list"></div>
 
-
-<script src="js/main.js"></script>
-<script>loadClients();</script>
+<script src="./js/main.js"></script>
 </body>
 </html>
