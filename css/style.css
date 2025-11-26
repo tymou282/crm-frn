@@ -98,3 +98,71 @@ button.delete:hover {
     background: #f0f0f0;
     margin-top: 50px;
 }
+/* Кнопки в hero-блоке */
+.main-buttons {
+    margin-top: 35px;
+}
+
+.blue-btn {
+    background: #ffffff;
+    color: #0057b7;
+    border: 2px solid #ffffff;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+.blue-btn:hover {
+    background: #eaf4ff;
+}
+
+/* Блок обратной связи */
+.contact-block {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    border-radius: 6px;
+    color: white;
+    border: none;
+}
+
+/* Telegram */
+.contact-btn.tg {
+    background: #2AABEE;
+}
+
+.contact-btn.tg:hover {
+    background: #1d93d2;
+}
+
+/* Email */
+.contact-btn.email {
+    background: #ff6b4a;
+}
+
+.contact-btn.email:hover {
+    background: #e85d3f;
+}
+
+/* Центровка всех элементов в header */
+.header .container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
