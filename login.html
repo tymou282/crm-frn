@@ -3,31 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вход</title>
-
-<!-- Важно: относительный путь -->
-<link rel="stylesheet" href="./css/style.css">
+<title>Вход в CRM</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="login-page">
 
 <div class="login-container">
     <div class="login-card">
-        <h2>Вход в CRM</h2>
+        <h2>Авторизация</h2>
 
         <input id="username" class="input" placeholder="Логин">
         <input id="password" class="input" type="password" placeholder="Пароль">
 
         <button class="btn blue-btn login-btn" onclick="login()">Войти</button>
 
-        <p class="login-hint">
-            Забыли пароль?
-            <a href="#" class="hint-link">Восстановить</a>
-        </p>
+        <p class="login-hint">Забыли пароль? <a href="#" class="hint-link">Восстановить</a></p>
     </div>
 </div>
 
-<!-- Очень важно: путь должен быть ./js/main.js -->
-<script src="./js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
