@@ -8,28 +8,113 @@
 </head>
 <body>
 
+<header class="topbar">
+    <div class="container">
+        <div class="logo">CRM<span>Pro</span></div>
+
+        <nav class="menu">
+            <a href="#features">Возможности</a>
+            <a href="#about">О системе</a>
+            <a href="#contact">Контакты</a>
+            <a href="login.html" class="btn small-btn blue-btn">Войти</a>
+        </nav>
+
+        <div class="menu-btn" id="menuBtn">☰</div>
+    </div>
+</header>
+
 <header class="header">
     <div class="container">
         <h1 class="title">CRM система для малого бизнеса</h1>
-        <p class="subtitle">Управляйте клиентами, продажами и задачами — просто и эффективно</p>
+        <p class="subtitle">
+            Управляйте клиентами, продажами, задачами и обращениями в одном месте.
+            Автоматизация, отчёты и удобный интерфейс.
+        </p>
 
         <div class="main-buttons">
-            <a href="login.html" class="btn blue-btn">Войти в систему</a>
-        </div>
-
-        <div class="contact-block">
-            <p class="contact-title">Нужна помощь или консультация?</p>
-            <div class="contact-buttons">
-                <a href="https://t.me/your_telegram" class="btn contact-btn tg">Написать в Telegram</a>
-                <a href="mailto:you@example.com" class="btn contact-btn email">Отправить Email</a>
-            </div>
+            <a href="login.html" class="btn big-btn blue-btn">Войти в систему</a>
+            <button id="themeToggle" class="btn big-btn dark-btn">Тёмная тема</button>
         </div>
     </div>
 </header>
 
+<section id="features" class="section">
+    <div class="container">
+        <h2 class="section-title">Возможности CRM</h2>
+
+        <div class="grid">
+
+            <div class="feature-card">
+                <div class="icon">📋</div>
+                <h3>Управление задачами</h3>
+                <p>Создание, контроль выполнения, напоминания и анализ эффективности.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">👥</div>
+                <h3>База клиентов</h3>
+                <p>Карточки клиентов, история взаимодействий и автоматизация коммуникаций.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">💬</div>
+                <h3>Обратная связь</h3>
+                <p>Единое окно для сообщений, заявок и поддержки клиентов.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="icon">📊</div>
+                <h3>Отчёты и аналитика</h3>
+                <p>Продажи, эффективность менеджеров и общая динамика бизнеса.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section alt">
+    <div class="container">
+        <h2 class="section-title">О системе</h2>
+
+        <p class="text-center max-600">
+            CRMPro — это удобная CRM-система для малого бизнеса, разработанная для
+            автоматизации рутинных процессов и роста продаж. Современный дизайн,
+            высокая скорость работы и понятный интерфейс позволяют начать работу сразу.
+        </p>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title">Связаться с нами</h2>
+
+        <div class="contact-buttons-center">
+            <a href="https://t.me/your_telegram" class="btn contact-btn tg">Написать в Telegram</a>
+            <a href="mailto:you@example.com" class="btn contact-btn email">Отправить Email</a>
+            <a href="https://wa.me/79999999999" class="btn contact-btn wa">WhatsApp</a>
+        </div>
+    </div>
+</section>
+
 <footer class="footer">
-    <p>© 2025 CRM для малого бизнеса</p>
+    <p>© 2025 CRMPro — CRM для малого бизнеса</p>
 </footer>
+
+<script>
+const toggle = document.getElementById("themeToggle");
+const body = document.body;
+toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    toggle.textContent = body.classList.contains("dark")
+        ? "Светлая тема"
+        : "Тёмная тема";
+});
+
+/* мобильное меню */
+document.getElementById("menuBtn").onclick = () => {
+    document.querySelector(".menu").classList.toggle("open");
+};
+</script>
 
 </body>
 </html>
