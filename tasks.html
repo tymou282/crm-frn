@@ -2,20 +2,17 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Задачи</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body onload="loadTasks()">
 
 <h1>Задачи</h1>
 <a href="clients.html" class="btn">Клиенты</a>
-<a href="login.html" class="btn">Выйти</a>
-
+<a href="#" class="btn" onclick="logout()">Выйти</a>
 
 <h2>Добавить задачу</h2>
-
-
 <div class="card">
 <input id="t_title" placeholder="Заголовок">
 <textarea id="t_desc" placeholder="Описание"></textarea>
@@ -25,12 +22,9 @@
 <button onclick="addTask()" class="btn">Добавить</button>
 </div>
 
-
 <h2>Список задач</h2>
 <div id="task_list"></div>
 
-
-<script src="js/main.js"></script>
-<script>loadTasks();</script>
+<script src="./js/main.js"></script>
 </body>
 </html>
