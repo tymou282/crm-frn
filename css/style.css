@@ -236,3 +236,100 @@ body.dark .section.alt {
 body.dark .feature-card {
     background: #2d2f33;
     co
+/* ============ LOGIN PAGE ============ */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-card {
+    background: #fff;
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 25px;
+    font-size: 1.7rem;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 14px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: .2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3c8ce7;
+    box-shadow: 0 0 6px rgba(60,140,231,.4);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+/* Подсказки */
+.login-hint {
+    margin-top: 18px;
+    opacity: .8;
+    font-size: .9rem;
+}
+
+.hint-link {
+    color: #0077ff;
+    text-decoration: none;
+}
+.hint-link:hover {
+    text-decoration: underline;
+}
+
+/* ========= ТЁМНАЯ ТЕМА ========= */
+
+body.dark.login-page {
+    background: linear-gradient(135deg, #0e1116, #111418);
+}
+
+body.dark .login-card {
+    background: #24262a;
+    color: #eee;
+}
+
+body.dark .input {
+    background: #2e3033;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark .input:focus {
+    border-color: #4ca3ff;
+}
+
+body.dark .login-hint {
+    color: #ccc;
+}
+
+body.dark .hint-link {
+    color: #4ca3ff;
+}
+
