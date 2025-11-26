@@ -236,25 +236,32 @@ body.dark .section.alt {
 body.dark .feature-card {
     background: #2d2f33;
     co
-/* LOGIN */
-
+/* LOGIN PAGE */
 .login-page {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 40px 20px;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
     background: linear-gradient(135deg, #3c8ce7, #00eaff);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
 }
 
 .login-card {
     background: #fff;
-    width: 100%;
-    max-width: 360px;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,.18);
+    padding: 35px 30px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
     text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 25px;
+    font-size: 1.7rem;
 }
 
 .input {
@@ -264,51 +271,57 @@ body.dark .feature-card {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1rem;
+    transition: 0.2s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #3c8ce7;
+    box-shadow: 0 0 6px rgba(60,140,231,.4);
 }
 
 .login-btn {
     width: 100%;
     margin-top: 15px;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 8px;
 }
 
-/* DARK THEME FIX */
-body.dark .login-card {
-    background: #26272a;
-    color: #eee;
+/* Подсказка */
+.login-hint {
+    margin-top: 18px;
+    opacity: .8;
+    font-size: .9rem;
 }
 
-body.dark .input {
-    background: #2f3033;
-    border-color: #555;
-    color: #fff;
+.hint-link {
+    color: #0077ff;
+    text-decoration: none;
+}
+.hint-link:hover {
+    text-decoration: underline;
 }
 
-
-/* ========= ТЁМНАЯ ТЕМА ========= */
-
+/* ТЁМНАЯ ТЕМА */
 body.dark.login-page {
     background: linear-gradient(135deg, #0e1116, #111418);
 }
-
 body.dark .login-card {
     background: #24262a;
     color: #eee;
 }
-
 body.dark .input {
     background: #2e3033;
     border-color: #555;
     color: #fff;
 }
-
 body.dark .input:focus {
     border-color: #4ca3ff;
 }
-
 body.dark .login-hint {
     color: #ccc;
 }
-
 body.dark .hint-link {
     color: #4ca3ff;
 }
