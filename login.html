@@ -2,23 +2,24 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<title>Вход</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход в систему</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="login-page">
 
+<div class="login-container">
+    <div class="login-card">
+        <h2>Вход в CRM</h2>
 
-<div class="card">
-<h2>Авторизация</h2>
+        <input id="username" class="input" placeholder="Логин">
+        <input id="password" class="input" type="password" placeholder="Пароль">
 
+        <button onclick="login()" class="btn blue-btn login-btn">Войти</button>
 
-<input id="username" placeholder="Логин">
-<input id="password" type="password" placeholder="Пароль">
-
-
-<button onclick="login()" class="btn">Войти</button>
+        <p class="login-hint">Забыли пароль? <a href="#" class="hint-link">Восстановить</a></p>
+    </div>
 </div>
-
 
 <script src="js/main.js"></script>
 </body>
