@@ -1,168 +1,238 @@
+/* ============ БАЗА ============ */
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #f3f5f7;
     color: #333;
+    transition: .3s;
 }
 
-/* Hero-блок */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========= НАВБАР ========= */
+
+.topbar {
+    background: #ffffffdd;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #0077ff;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.menu a:hover {
+    color: #0077ff;
+}
+
+/* Мобильная кнопка */
+.menu-btn {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ========= HERO ========= */
+
 .header {
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px;
     background: linear-gradient(135deg, #3c8ce7, #00eaff);
     color: #fff;
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    font-size: 1.25rem;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    opacity: .9;
 }
 
-/* Контейнер для внутреннего контента */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Карточки */
-.card {
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 5px #ccc;
-}
-
-.client, .task-item {
-    padding: 10px;
-    border-radius: 6px;
-    background: white;
-    margin-bottom: 10px;
-    box-shadow: 0 0 3px #bbb;
-}
-
-/* Поля ввода */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-/* Кнопка */
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    background: #ffffff;
-    color: #0077cc;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
-    font-weight: bold;
-    transition: 0.2s;
-    box-shadow: 0 0 4px rgba(0,0,0,0.2);
-}
-
-.btn:hover {
-    background: #e6f2ff;
-}
-
-/* Кнопка удаления */
-button.delete {
-    background: red;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button.delete:hover {
-    background: #cc0000;
-}
-
-/* Футер */
-.footer {
-    text-align: center;
-    padding: 15px 0;
-    font-size: 0.9rem;
-    color: #666;
-    background: #f0f0f0;
-    margin-top: 50px;
-}
-/* Кнопки в hero-блоке */
 .main-buttons {
-    margin-top: 35px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* ========= КНОПКИ ========= */
+
+.btn {
+    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: bold;
+    transition: .2s;
+    display: inline-block;
+}
+
+.big-btn {
+    font-size: 1.1rem;
+}
+
+.small-btn {
+    padding: 8px 16px;
 }
 
 .blue-btn {
-    background: #ffffff;
+    background: #fff;
     color: #0057b7;
-    border: 2px solid #ffffff;
-    padding: 14px 32px;
-    font-size: 1.1rem;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
 
 .blue-btn:hover {
-    background: #eaf4ff;
+    background: #e6f3ff;
 }
 
-/* Блок обратной связи */
-.contact-block {
-    margin-top: 60px;
+.dark-btn {
+    background: #004a99;
+    color: #fff;
+}
+.dark-btn:hover {
+    background: #003f87;
+}
+
+/* ========= РАЗДЕЛЫ ========= */
+
+.section {
+    padding: 80px 20px;
+}
+
+.section.alt {
+    background: #f0f1f4;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+/* ========= КАРТОЧКИ ========= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* ========= ТЕКСТ ========= */
+
+.text-center {
     text-align: center;
 }
 
-.contact-title {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    opacity: 0.9;
+.max-600 {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.contact-buttons {
+/* ========= КОНТАКТЫ ========= */
+
+.contact-buttons-center {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .contact-btn {
-    padding: 12px 24px;
-    font-size: 0.95rem;
-    border-radius: 6px;
-    color: white;
-    border: none;
+    color: #fff;
 }
 
 /* Telegram */
-.contact-btn.tg {
-    background: #2AABEE;
-}
-
-.contact-btn.tg:hover {
-    background: #1d93d2;
-}
+.contact-btn.tg { background: #2AABEE; }
+.contact-btn.tg:hover { background: #189cd6; }
 
 /* Email */
-.contact-btn.email {
-    background: #ff6b4a;
+.contact-btn.email { background: #ff6b4a; }
+.contact-btn.email:hover { background: #e55d3f; }
+
+/* WhatsApp */
+.contact-btn.wa { background: #25D366; }
+.contact-btn.wa:hover { background: #1ebe58; }
+
+/* ========= ФУТЕР ========= */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #f0f0f0;
+    margin-top: 50px;
 }
 
-.contact-btn.email:hover {
-    background: #e85d3f;
+/* ========= ТЁМНАЯ ТЕМА ========= */
+
+body.dark {
+    background: #1d1f22;
+    color: #e1e1e1;
 }
 
-/* Центровка всех элементов в header */
-.header .container {
-    max-width: 750px;
-    margin: 0 auto;
+body.dark .topbar {
+    background: #26282b;
 }
 
+body.dark .menu a {
+    color: #e1e1e1;
+}
+body.dark .menu a:hover {
+    color: #4ca3ff;
+}
+
+body.dark .section.alt {
+    background: #27292c;
+}
+
+body.dark .feature-card {
+    background: #2d2f33;
+    co
