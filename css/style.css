@@ -1,39 +1,43 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f3f5f7;
+    color: #333;
+}
+
+/* Hero-блок */
+.header {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #3c8ce7, #00eaff);
+    color: #fff;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Контейнер для внутреннего контента */
+.container {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background: #f3f3f3;
 }
 
-h1, h2 {
-    text-align: center;
-}
-
+/* Карточки */
 .card {
     background: white;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 0 5px #ccc;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background: #3498db;
-    color: white;
-    border-radius: 6px;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 .client, .task-item {
@@ -44,6 +48,53 @@ input, textarea {
     box-shadow: 0 0 3px #bbb;
 }
 
+/* Поля ввода */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #ffffff;
+    color: #0077cc;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background: #e6f2ff;
+}
+
+/* Кнопка удаления */
 button.delete {
     background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.delete:hover {
+    background: #cc0000;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    color: #666;
+    background: #f0f0f0;
+    margin-top: 50px;
 }
