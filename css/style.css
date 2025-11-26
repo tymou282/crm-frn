@@ -1,61 +1,92 @@
-/* ============ БАЗА ============ */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: #f3f5f7;
-    color: #333;
-    transition: 0.3s;
+/* ============ ТОПБАР ============ */
+.topbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-h1, h2 {
-    text-align: center;
-    margin: 15px 0;
+.topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
 }
 
-a {
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.logo span {
+    color: #0077ff;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.menu a {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+.menu a:hover {
+    background: #e6f3ff;
+    color: #0077ff;
+}
+
+/* ============ КАРТОЧКИ ============ */
+.card, .client, .task-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin: 20px auto;
+    transition: 0.2s;
+}
+.card:hover, .client:hover, .task-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* ============ СЕТКА ============ */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 /* ============ КНОПКИ ============ */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 12px 20px;
     border-radius: 8px;
     font-weight: bold;
-    transition: 0.2s;
     cursor: pointer;
     text-align: center;
     background: #3498db;
     color: #fff;
     border: none;
     margin: 5px 0;
+    transition: 0.2s;
 }
-
 .btn:hover {
     background: #2573a6;
 }
 
 button.delete {
     background: #e74c3c;
-    color: #fff;
-    border: none;
 }
-
 button.delete:hover {
     background: #c0392b;
 }
 
-/* ============ КАРТОЧКИ ============ */
-.card, .client, .task-item {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    margin: 15px auto;
-    max-width: 500px;
-}
-
-/* ============ INPUTS & TEXTAREA ============ */
+/* ============ INPUTS ============ */
 input, textarea {
     width: 100%;
     padding: 14px;
@@ -63,16 +94,14 @@ input, textarea {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 1rem;
-    box-sizing: border-box;
 }
-
 input:focus, textarea:focus {
     outline: none;
     border-color: #3498db;
     box-shadow: 0 0 8px rgba(52,152,219,0.3);
 }
 
-/* ============ LOGIN PAGE ============ */
+/* ============ LOGIN ============ */
 .login-page {
     display: flex;
     justify-content: center;
@@ -81,7 +110,6 @@ input:focus, textarea:focus {
     background: linear-gradient(135deg, #3c8ce7, #00eaff);
     padding: 20px;
 }
-
 .login-card {
     background: #fff;
     padding: 35px 25px;
@@ -91,12 +119,10 @@ input:focus, textarea:focus {
     width: 100%;
     max-width: 400px;
 }
-
 .login-card h2 {
     margin-bottom: 25px;
     font-size: 1.7rem;
 }
-
 .login-btn {
     width: 100%;
     padding: 14px;
@@ -105,64 +131,22 @@ input:focus, textarea:focus {
     margin-top: 15px;
 }
 
-.login-hint {
-    margin-top: 15px;
-    opacity: 0.8;
-    font-size: 0.9rem;
-}
-
-.hint-link {
-    color: #0077ff;
-    text-decoration: none;
-}
-
-.hint-link:hover {
-    text-decoration: underline;
-}
-
-/* ============ ССЫЛКИ НА СТРАНИЦЫ ============ */
-body > a.btn {
-    display: inline-block;
-    margin: 10px 5px;
-}
-
-/* ============ СПИСКИ ============ */
-.client, .task-item {
-    font-size: 0.95rem;
-    line-height: 1.4rem;
-}
-
 /* ============ АДАПТИВНОСТЬ ============ */
-@media (max-width: 600px) {
-
-    body, html {
-        padding: 0;
-        margin: 0;
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        gap: 10px;
     }
-
-    h1, h2 {
-        font-size: 1.4rem;
+    .grid {
+        grid-template-columns: 1fr;
     }
-
-    .card, .client, .task-item, .login-card {
+}
+@media (max-width: 480px) {
+    .login-card, .card, .client, .task-item {
         width: 95%;
-        margin: 10px auto;
         padding: 15px;
     }
-
-    input, textarea {
-        padding: 12px;
-        font-size: 0.95rem;
+    h1, h2 {
+        font-size: 1.3rem;
     }
-
-    .btn, button.delete {
-        padding: 12px;
-        font-size: 1rem;
-        width: 100%;
-    }
-
-    .login-card {
-        padding: 25px 15px;
-    }
-
 }
