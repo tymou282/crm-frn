@@ -1,120 +1,79 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CRM — Главная</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CRM — Главная</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Простая и эффективная CRM система для малого бизнеса. Управляйте клиентами, продажами и задачами.">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="topbar">
-    <div class="container">
-        <div class="logo">CRM<span>Pro</span></div>
+<header class="header">
+    <div class="container header-container">
 
-        <nav class="menu">
-            <a href="#features">Возможности</a>
-            <a href="#about">О системе</a>
-            <a href="#contact">Контакты</a>
-            <a href="login.html" class="btn small-btn blue-btn">Войти</a>
+        <a href="index.html" class="logo">CRM</a>
+
+        <!-- Бургер -->
+        <div class="burger" id="burger">
+            <span></span><span></span><span></span>
+        </div>
+
+        <nav class="nav" id="nav">
+            <ul class="menu">
+                <li><a href="features.html">Возможности</a></li>
+                <li><a href="pricing.html">Тарифы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html" class="btn small">Войти</a></li>
+            </ul>
         </nav>
 
-        <div class="menu-btn" id="menuBtn">☰</div>
+    </div>
+
+    <div class="hero container">
+        <h1 class="title">Современная CRM для малого бизнеса</h1>
+        <p class="subtitle">Управляйте клиентами, задачами и продажами — просто, быстро и удобно</p>
+        <a href="login.html" class="btn big">Начать работу</a>
     </div>
 </header>
 
-<header class="header">
-    <div class="container">
-        <h1 class="title">CRM система для малого бизнеса</h1>
-        <p class="subtitle">
-            Управляйте клиентами, продажами, задачами и обращениями в одном месте.
-            Автоматизация, отчёты и удобный интерфейс.
-        </p>
+<main class="main">
 
-        <div class="main-buttons">
-            <a href="login.html" class="btn big-btn blue-btn">Войти в систему</a>
-            <button id="themeToggle" class="btn big-btn dark-btn">Тёмная тема</button>
+<section class="features container">
+    <h2>Почему именно наша CRM?</h2>
+
+    <div class="features-grid">
+        <div class="feature">
+            <h3>Легкость использования</h3>
+            <p>Понятный интерфейс, который освоит любой сотрудник за 15 минут.</p>
         </div>
-    </div>
-</header>
-
-<section id="features" class="section">
-    <div class="container">
-        <h2 class="section-title">Возможности CRM</h2>
-
-        <div class="grid">
-
-            <div class="feature-card">
-                <div class="icon">📋</div>
-                <h3>Управление задачами</h3>
-                <p>Создание, контроль выполнения, напоминания и анализ эффективности.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon">👥</div>
-                <h3>База клиентов</h3>
-                <p>Карточки клиентов, история взаимодействий и автоматизация коммуникаций.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon">💬</div>
-                <h3>Обратная связь</h3>
-                <p>Единое окно для сообщений, заявок и поддержки клиентов.</p>
-            </div>
-
-            <div class="feature-card">
-                <div class="icon">📊</div>
-                <h3>Отчёты и аналитика</h3>
-                <p>Продажи, эффективность менеджеров и общая динамика бизнеса.</p>
-            </div>
-
+        <div class="feature">
+            <h3>Управление продажами</h3>
+            <p>Воронки, лиды, этапы сделок — всё под рукой.</p>
+        </div>
+        <div class="feature">
+            <h3>Контроль задач</h3>
+            <p>Назначайте задачи, ставьте сроки и следите за выполнением.</p>
+        </div>
+        <div class="feature">
+            <h3>Работа с клиентами</h3>
+            <p>История взаимодействий, сегментация, напоминания.</p>
         </div>
     </div>
 </section>
 
-<section id="about" class="section alt">
-    <div class="container">
-        <h2 class="section-title">О системе</h2>
-
-        <p class="text-center max-600">
-            CRMPro — это удобная CRM-система для малого бизнеса, разработанная для
-            автоматизации рутинных процессов и роста продаж. Современный дизайн,
-            высокая скорость работы и понятный интерфейс позволяют начать работу сразу.
-        </p>
-    </div>
-</section>
-
-<section id="contact" class="section">
-    <div class="container">
-        <h2 class="section-title">Связаться с нами</h2>
-
-        <div class="contact-buttons-center">
-            <a href="https://t.me/your_telegram" class="btn contact-btn tg">Написать в Telegram</a>
-            <a href="mailto:you@example.com" class="btn contact-btn email">Отправить Email</a>
-            <a href="https://wa.me/79999999999" class="btn contact-btn wa">WhatsApp</a>
-        </div>
-    </div>
-</section>
+</main>
 
 <footer class="footer">
-    <p>© 2025 CRMPro — CRM для малого бизнеса</p>
+    <div class="container">
+        <p>© 2025 CRM для малого бизнеса</p>
+    </div>
 </footer>
 
-<script>
-const toggle = document.getElementById("themeToggle");
-const body = document.body;
-toggle.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    toggle.textContent = body.classList.contains("dark")
-        ? "Светлая тема"
-        : "Тёмная тема";
-});
-
-/* мобильное меню */
-document.getElementById("menuBtn").onclick = () => {
-    document.querySelector(".menu").classList.toggle("open");
-};
-</script>
-
+<script src="js/main.js"></script>
 </body>
 </html>
