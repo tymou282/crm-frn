@@ -6,7 +6,6 @@
     top: 0;
     z-index: 100;
 }
-
 .topbar .container {
     display: flex;
     justify-content: space-between;
@@ -129,6 +128,90 @@ input:focus, textarea:focus {
     font-size: 1.1rem;
     border-radius: 8px;
     margin-top: 15px;
+}
+
+/* ===========================================================
+   =============      ТЁМНАЯ ТЕМА (ИСПРАВЛЕНО)     ===========
+   =========================================================== */
+body.dark {
+    background: #121212;
+    color: #e5e5e5;
+}
+
+/* Топбар */
+body.dark .topbar {
+    background: #1a1a1a;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.05);
+}
+body.dark .menu a {
+    color: #ddd;
+}
+body.dark .menu a:hover {
+    background: #333;
+    color: #4da3ff;
+}
+
+/* Карточки */
+body.dark .card,
+body.dark .client,
+body.dark .task-item {
+    background: #1d1d1d;
+    border: 1px solid #333;
+    box-shadow: none;
+    color: #e5e5e5;
+}
+body.dark .card:hover,
+body.dark .client:hover,
+body.dark .task-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(255,255,255,0.05);
+}
+
+/* Кнопки */
+body.dark .btn {
+    background: #333;
+    color: #fff;
+}
+body.dark .btn:hover {
+    background: #444;
+}
+body.dark .btn.blue-btn {
+    background: #0066dd;
+}
+body.dark .btn.blue-btn:hover {
+    background: #0052b0;
+}
+
+/* Inputs */
+body.dark input,
+body.dark textarea {
+    background: #1c1c1c;
+    border: 1px solid #444;
+    color: #eee;
+}
+body.dark input:focus,
+body.dark textarea:focus {
+    border-color: #3399ff;
+    box-shadow: 0 0 8px rgba(51,153,255,0.3);
+}
+
+/* Login card */
+body.dark .login-card {
+    background: #1c1c1c;
+    color: #eee;
+}
+
+/* Секции */
+body.dark section,
+body.dark .section {
+    background: #121212;
+    color: #e5e5e5;
+}
+
+/* Footer */
+body.dark .footer {
+    background: #1a1a1a;
+    color: #ccc;
 }
 
 /* ============ АДАПТИВНОСТЬ ============ */
