@@ -1,4 +1,4 @@
-const API = "https://НАЗВАНИЕ_САЙТА"; // Замените на ваш API
+const API = "https://tymou282.github.io/crm-frn/"; // Замените на ваш API
 
 // ------------------- LOGIN -------------------
 async function login() {
@@ -204,3 +204,4 @@ async function deleteTask(id) {
         alert("Не удалось удалить задачу!");
     }
 }
+
