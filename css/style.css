@@ -1,37 +1,52 @@
+/* ===============================
+   RESET
+================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Inter", sans-serif;
-    background: #F7F8FC;
+    background: #F5F6FA;
     color: #1A1A1A;
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
-/* Container */
+/* ===============================
+   CONTAINERS
+================================ */
 .container {
-    width: min(1200px, 92%);
-    margin: auto;
+    width: min(1200px, 90%);
+    margin-inline: auto;
 }
 
-/* Header */
+/* ===============================
+   HEADER
+================================ */
 .header {
     position: fixed;
     top: 0; left: 0; right: 0;
+    height: 70px;
     background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    z-index: 1000;
+    display: flex;
+    align-items: center;
+    z-index: 10;
 }
 
 .nav-wrapper {
+    width: min(1200px, 90%);
+    margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 70px;
+    align-items: center;
 }
 
 .logo {
@@ -41,77 +56,86 @@ body {
     text-decoration: none;
 }
 
-/* Nav */
+/* NAV */
+.nav {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
 .nav a {
-    margin-left: 28px;
+    color: #444;
     text-decoration: none;
-    color: #1A1A1A;
     font-weight: 500;
+    transition: 0.2s ease;
 }
 
-.nav .btn {
-    margin-left: 40px;
+.nav a:hover {
+    color: #4B6BFB;
 }
 
-/* Burger */
+/* BURGER */
 .burger {
     display: none;
-    background: none;
-    border: none;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .burger span {
-    display: block;
-    width: 26px;
     height: 3px;
-    background: #1A1A1A;
-    margin: 5px 0;
+    margin: 4px 0;
+    background: #333;
     border-radius: 3px;
+    transition: 0.3s;
 }
 
-/* Hero */
+/* ===============================
+   HERO
+================================ */
 .hero {
-    padding-top: 150px;
     text-align: center;
+    padding-top: 160px;
+    padding-bottom: 100px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    font-size: clamp(32px, 4vw, 48px);
     font-weight: 700;
-    margin-bottom: 16px;
+    color: #1A1A1A;
+    margin-bottom: 20px;
 }
 
 .hero p {
     font-size: 20px;
-    color: #444;
-    max-width: 660px;
-    margin: auto;
-}
-
-.hero .note {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #777;
+    max-width: 640px;
+    color: #555;
+    margin-inline: auto;
+    margin-bottom: 24px;
 }
 
 .hero-image {
+    margin-top: 40px;
     width: 100%;
-    height: 300px;
-    margin-top: 50px;
-    background: linear-gradient(135deg, #4B6BFB22, #4B6BFB05);
+    height: 280px;
     border-radius: 20px;
+    background: linear-gradient(135deg, #4B6BFB22, #4B6BFB05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
-/* Buttons */
+/* ===============================
+   BUTTONS
+================================ */
 .btn {
     display: inline-block;
-    padding: 13px 26px;
+    padding: 12px 32px;
     border-radius: 12px;
     background: #4B6BFB;
     color: #fff;
-    text-decoration: none;
     font-weight: 600;
+    text-decoration: none;
     transition: 0.25s;
 }
 
@@ -120,19 +144,23 @@ body {
     transform: translateY(-2px);
 }
 
-.btn.big {
-    padding: 16px 38px;
-    font-size: 18px;
-}
-
 .btn.small {
-    padding: 8px 18px;
-    font-size: 14px;
+    padding: 8px 20px;
 }
 
-/* Features */
+.btn.delete {
+    background: #F44336;
+}
+
+.btn.delete:hover {
+    background: #D32F2F;
+}
+
+/* ===============================
+   FEATURES
+================================ */
 .features {
-    margin-top: 120px;
+    padding: 80px 0;
     text-align: center;
 }
 
@@ -143,74 +171,44 @@ body {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px;
 }
 
 .feature-card {
     background: #fff;
-    padding: 32px;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    transition: 0.3s;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
 }
 
 .feature-card:hover {
     transform: translateY(-6px);
 }
 
-.icon {
-    font-size: 48px;
-    margin-bottom: 16px;
+.feature-card .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.cta-center {
-    margin-top: 40px;
-}
-
-/* Footer */
+/* ===============================
+   FOOTER
+================================ */
 .footer {
-    margin-top: 120px;
+    margin-top: 80px;
     padding: 40px 0;
     border-top: 1px solid #ddd;
+    text-align: center;
 }
 
-.footer-grid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-links a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #444;
-}
-
-/* --- Animations --- */
-.fade-in { animation: fadeIn 1s ease forwards; opacity: 0; }
-.fade-up { animation: fadeUp 1s ease forwards; opacity: 0; }
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- Mobile --- */
+/* ===============================
+   MOBILE
+================================ */
 @media (max-width: 900px) {
-    .features-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
     .burger {
-        display: block;
+        display: flex;
     }
 
     .nav {
@@ -218,19 +216,13 @@ body {
         position: fixed;
         top: 0; right: 0; bottom: 0;
         width: 70%;
-        background: #fff;
-        padding-top: 80px;
-        padding-left: 40px;
         flex-direction: column;
+        background: #fff;
+        padding-top: 120px;
+        gap: 25px;
     }
 
-    .nav a {
-        display: block;
-        margin: 20px 0;
-        font-size: 20px;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
+    .nav.open {
+        display: flex;
     }
 }
