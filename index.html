@@ -24,7 +24,7 @@
             <a href="#">Возможности</a>
             <a href="#">Тарифы</a>
             <a href="#">Контакты</a>
-            <a href="#" class="btn small" id="btn-login-header">Войти</a>
+            <a href="login.html" class="btn small">Войти</a>
         </nav>
     </div>
 </header>
@@ -32,11 +32,10 @@
 <section class="hero container fade-in">
     <h1>Современная CRM для малого бизнеса</h1>
     <p>Управляйте клиентами, сделками и задачами — быстро, просто и эффективно.</p>
+
     <div class="hero-buttons">
-        <button class="btn big" id="btn-register-hero">Попробовать бесплатно</button>
-        <button class="btn big secondary" id="btn-login-hero">Войти</button>
+        <a href="login.html" class="btn big">Войти</a>
     </div>
-    <p class="note">14 дней бесплатно • Без привязки карты</p>
 
     <div class="hero-image"></div>
 </section>
@@ -69,34 +68,7 @@
             <p>История, заметки, сегменты, метки — полный контроль над базой.</p>
         </div>
     </div>
-
-    <div class="cta-center">
-        <button class="btn big" id="btn-register-footer">Начать использовать</button>
-    </div>
 </section>
-
-<!-- Модальные окна -->
-<div id="modal-login" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-login')">&times;</span>
-        <h2>Войти</h2>
-        <input type="text" id="username" placeholder="Логин">
-        <input type="password" id="password" placeholder="Пароль">
-        <button class="btn" onclick="login()">Войти</button>
-    </div>
-</div>
-
-<div id="modal-register" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal('modal-register')">&times;</span>
-        <h2>Регистрация</h2>
-        <input type="text" id="r_username" placeholder="Логин">
-        <input type="email" id="r_email" placeholder="Email">
-        <input type="password" id="r_password" placeholder="Пароль">
-        <input type="password" id="r_password2" placeholder="Повторите пароль">
-        <button class="btn" onclick="register()">Зарегистрироваться</button>
-    </div>
-</div>
 
 <footer class="footer">
     <div class="container footer-grid">
@@ -109,34 +81,5 @@
 </footer>
 
 <script src="main.js"></script>
-<script>
-    // Кнопки открытия модальных окон
-    const loginButtons = ["btn-login-header","btn-login-hero"];
-    const registerButtons = ["btn-register-hero","btn-register-footer"];
-
-    loginButtons.forEach(id => {
-        document.getElementById(id).onclick = () => openModal("modal-login");
-    });
-    registerButtons.forEach(id => {
-        document.getElementById(id).onclick = () => openModal("modal-register");
-    });
-
-    function openModal(id){
-        document.getElementById(id).style.display = "flex";
-    }
-
-    function closeModal(id){
-        document.getElementById(id).style.display = "none";
-    }
-
-    // Закрытие по клику вне окна
-    window.onclick = function(event) {
-        ["modal-login","modal-register"].forEach(id=>{
-            const modal = document.getElementById(id);
-            if(event.target == modal) modal.style.display="none";
-        })
-    }
-</script>
 </body>
 </html>
-
