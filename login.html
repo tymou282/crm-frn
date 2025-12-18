@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Вход в CRM</title>
+    <meta charset="UTF-8">
+    <title>Вход — CRMpro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body class="login-page">
 
-<div class="login-container">
-    <div class="login-card">
-        <h2>Вход в CRM</h2>
-        <p class="subtitle">Введите логин и пароль</p>
+<div class="login-wrapper">
+    <div class="login-card fade-in">
+        <h1>Вход в CRM</h1>
+        <p class="login-subtitle">Добро пожаловать в CRMpro</p>
 
-        <label>
-            <input id="username" class="input" placeholder="Логин" autocomplete="username">
-        </label>
+        <input type="text" placeholder="Логин" class="login-input">
+        <input type="password" placeholder="Пароль" class="login-input">
 
-        <label>
-            <input id="password" class="input" type="password" placeholder="Пароль" autocomplete="current-password">
-        </label>
+        <button class="btn big login-btn">Войти</button>
 
-        <button class="btn login-btn" onclick="login()">Войти</button>
+        <a href="index.html" class="login-back">← На главную</a>
     </div>
 </div>
 
-<script src="./js/main.js"></script>
 </body>
 </html>
