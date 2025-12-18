@@ -9,23 +9,11 @@
 </head>
 <body class="login-page">
 
-<div class="login-layout">
+<div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px;">
 
-    <!-- Левая колонка с информацией -->
-    <div class="login-info">
-        <h1>CRMpro</h1>
-        <p>Управляйте клиентами, сделками и задачами в одном современном интерфейсе</p>
-        <ul>
-            <li>✔ Быстро</li>
-            <li>✔ Удобно</li>
-            <li>✔ Без лишнего</li>
-        </ul>
-    </div>
-
-    <!-- Правая колонка с задачами -->
-    <div class="login-card fade-in">
+    <div class="login-card fade-in" style="width: 100%; max-width: 600px;">
         <h2>Задачи</h2>
-        <p class="login-subtitle">Добавляйте и просматривайте свои задачи</p>
+        <p class="login-subtitle">Добавляйте новые задачи и просматривайте существующие</p>
 
         <!-- Форма добавления задачи -->
         <div class="field">
@@ -60,9 +48,11 @@
 
         <button onclick="addTask()" class="btn big login-btn">Добавить задачу</button>
 
+        <!-- Список задач -->
         <h3 style="margin-top: 30px;">Список задач</h3>
         <div id="task_list"></div>
 
+        <!-- Кнопки действий -->
         <div class="login-footer" style="margin-top: 20px;">
             <a href="clients.html" class="btn small">Клиенты</a>
             <a href="#" class="btn small" onclick="logout()">Выйти</a>
