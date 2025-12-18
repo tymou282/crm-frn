@@ -479,5 +479,81 @@ body {
         display: none;
     }
 }
+/* ===============================
+   TASKS PAGE
+================================ */
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 90px; /* чтобы не перекрывал фиксированный header */
+    margin-bottom: 20px;
+}
+
+.tasks-header h1 {
+    font-size: 32px;
+    color: var(--text);
+}
+
+.task-form {
+    background: var(--card);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    font-size: 15px;
+}
+
+.task-form button {
+    align-self: flex-start;
+}
+
+#task_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-item {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: 0.25s;
+}
+
+.task-item:hover {
+    transform: translateY(-4px);
+}
+
+.task-item h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.task-item p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.task-item .meta {
+    font-size: 13px;
+    color: #888;
+}
+
 
 
