@@ -3,41 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Задачи</title>
+<title>Задачи — CRMpro</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="loadTasks()">
+<body class="login-page">
 
-<div class="container">
+<div class="login-layout">
 
-    <!-- Header -->
-    <div class="tasks-header">
-        <h1>Задачи</h1>
-        <div>
-            <a href="clients.html" class="btn">Клиенты</a>
-            <a href="#" class="btn" onclick="logout()">Выйти</a>
+    <!-- Левая колонка с информацией -->
+    <div class="login-info">
+        <h1>CRMpro</h1>
+        <p>Управляйте клиентами, сделками и задачами в одном современном интерфейсе</p>
+        <ul>
+            <li>✔ Быстро</li>
+            <li>✔ Удобно</li>
+            <li>✔ Без лишнего</li>
+        </ul>
+    </div>
+
+    <!-- Правая колонка с задачами -->
+    <div class="login-card fade-in">
+        <h2>Задачи</h2>
+        <p class="login-subtitle">Добавляйте и просматривайте свои задачи</p>
+
+        <!-- Форма добавления задачи -->
+        <div class="field">
+            <input id="t_title" placeholder=" " required>
+            <label>Заголовок</label>
+        </div>
+
+        <div class="field">
+            <textarea id="t_desc" placeholder=" "></textarea>
+            <label>Описание</label>
+        </div>
+
+        <div class="field">
+            <select id="t_status">
+                <option value="" disabled selected>Статус</option>
+                <option value="Новая">Новая</option>
+                <option value="В работе">В работе</option>
+                <option value="Выполнена">Выполнена</option>
+            </select>
+            <label>Статус</label>
+        </div>
+
+        <div class="field">
+            <input id="t_assigned" placeholder=" " required>
+            <label>Ответственный</label>
+        </div>
+
+        <div class="field">
+            <input id="t_due" type="date" placeholder=" ">
+            <label>Срок</label>
+        </div>
+
+        <button onclick="addTask()" class="btn big login-btn">Добавить задачу</button>
+
+        <h3 style="margin-top: 30px;">Список задач</h3>
+        <div id="task_list"></div>
+
+        <div class="login-footer" style="margin-top: 20px;">
+            <a href="clients.html" class="btn small">Клиенты</a>
+            <a href="#" class="btn small" onclick="logout()">Выйти</a>
         </div>
     </div>
-
-    <!-- Форма добавления задачи -->
-    <h2>Добавить задачу</h2>
-    <div class="task-form">
-        <input id="t_title" placeholder="Заголовок">
-        <textarea id="t_desc" placeholder="Описание"></textarea>
-        <select id="t_status">
-            <option value="" disabled selected>Статус</option>
-            <option value="Новая">Новая</option>
-            <option value="В работе">В работе</option>
-            <option value="Выполнена">Выполнена</option>
-        </select>
-        <input id="t_assigned" placeholder="Ответственный">
-        <input id="t_due" type="date">
-        <button onclick="addTask()" class="btn">Добавить</button>
-    </div>
-
-    <!-- Список задач -->
-    <h2>Список задач</h2>
-    <div id="task_list"></div>
 
 </div>
 
