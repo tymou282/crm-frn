@@ -10,19 +10,44 @@
 </head>
 <body class="login-page">
 
-<div class="login-wrapper">
-    <div class="login-card fade-in">
-        <h1>Вход в CRM</h1>
-        <p class="login-subtitle">Добро пожаловать в CRMpro</p>
+<div class="login-layout">
+    <div class="login-info">
+        <h1>CRMpro</h1>
+        <p>
+            Управляйте клиентами, сделками и задачами  
+            в одном современном интерфейсе
+        </p>
+        <ul>
+            <li>✔ Быстро</li>
+            <li>✔ Удобно</li>
+            <li>✔ Без лишнего</li>
+        </ul>
+    </div>
 
-        <input type="text" placeholder="Логин" class="login-input">
-        <input type="password" placeholder="Пароль" class="login-input">
+    <div class="login-card fade-in">
+        <h2>Вход в систему</h2>
+        <p class="login-subtitle">Введите данные для входа</p>
+
+        <div class="field">
+            <input type="text" placeholder=" " required>
+            <label>Логин</label>
+        </div>
+
+        <div class="field password">
+            <input type="password" placeholder=" " id="password" required>
+            <label>Пароль</label>
+            <span class="toggle-pass" onclick="togglePassword()">👁</span>
+        </div>
 
         <button class="btn big login-btn">Войти</button>
 
-        <a href="index.html" class="login-back">← На главную</a>
+        <div class="login-footer">
+            <a href="#">Забыли пароль?</a>
+            <a href="index.html">На главную</a>
+        </div>
     </div>
 </div>
 
+<script src="login.js"></script>
 </body>
 </html>
