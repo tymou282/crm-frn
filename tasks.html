@@ -8,22 +8,38 @@
 </head>
 <body onload="loadTasks()">
 
-<h1>Задачи</h1>
-<a href="clients.html" class="btn">Клиенты</a>
-<a href="#" class="btn" onclick="logout()">Выйти</a>
+<div class="container">
 
-<h2>Добавить задачу</h2>
-<div class="card">
-<input id="t_title" placeholder="Заголовок">
-<textarea id="t_desc" placeholder="Описание"></textarea>
-<input id="t_status" placeholder="Статус">
-<input id="t_assigned" placeholder="Ответственный">
-<input id="t_due" type="date">
-<button onclick="addTask()" class="btn">Добавить</button>
+    <!-- Header -->
+    <div class="tasks-header">
+        <h1>Задачи</h1>
+        <div>
+            <a href="clients.html" class="btn">Клиенты</a>
+            <a href="#" class="btn" onclick="logout()">Выйти</a>
+        </div>
+    </div>
+
+    <!-- Форма добавления задачи -->
+    <h2>Добавить задачу</h2>
+    <div class="task-form">
+        <input id="t_title" placeholder="Заголовок">
+        <textarea id="t_desc" placeholder="Описание"></textarea>
+        <select id="t_status">
+            <option value="" disabled selected>Статус</option>
+            <option value="Новая">Новая</option>
+            <option value="В работе">В работе</option>
+            <option value="Выполнена">Выполнена</option>
+        </select>
+        <input id="t_assigned" placeholder="Ответственный">
+        <input id="t_due" type="date">
+        <button onclick="addTask()" class="btn">Добавить</button>
+    </div>
+
+    <!-- Список задач -->
+    <h2>Список задач</h2>
+    <div id="task_list"></div>
+
 </div>
-
-<h2>Список задач</h2>
-<div id="task_list"></div>
 
 <script src="./js/main.js"></script>
 </body>
