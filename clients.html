@@ -1,30 +1,69 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Клиенты</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Клиенты — CRMpro</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="loadClients()">
+<body>
 
-<h1>Клиенты</h1>
-<a href="tasks.html" class="btn">Задачи</a>
-<a href="#" class="btn" onclick="logout()">Выйти</a>
+<header class="header">
+    <div class="container nav-wrapper">
+        <a href="index.html" class="logo">CRMpro</a>
 
-<h2>Добавить клиента</h2>
-<div class="card">
-<input id="c_name" placeholder="Имя">
-<input id="c_phone" placeholder="Телефон">
-<input id="c_email" placeholder="Email">
-<input id="c_company" placeholder="Компания">
-<textarea id="c_notes" placeholder="Заметки"></textarea>
-<button onclick="addClient()" class="btn">Добавить</button>
-</div>
+        <nav class="nav">
+            <a href="tasks.html">Задачи</a>
+            <a href="clients.html" class="active">Клиенты</a>
+            <a href="#">Сделки</a>
+        </nav>
+    </div>
+</header>
 
-<h2>Список клиентов</h2>
-<div id="client_list"></div>
+<main class="container clients-page">
 
-<script src="./js/main.js"></script>
+    <!-- PAGE HEADER -->
+    <div class="clients-header">
+        <h1>Клиенты</h1>
+        <button class="btn">+ Добавить клиента</button>
+    </div>
+
+    <!-- TOOLS -->
+    <div class="clients-tools">
+        <input type="text" placeholder="Поиск клиента..." class="clients-search">
+
+        <select class="clients-filter">
+            <option>Все</option>
+            <option>Активные</option>
+            <option>Новые</option>
+        </select>
+    </div>
+
+    <!-- CLIENT LIST -->
+    <div class="clients-grid">
+
+        <div class="client-card">
+            <div class="client-avatar">А</div>
+            <div class="client-info">
+                <h3>Алексей Иванов</h3>
+                <p>alex@mail.ru</p>
+            </div>
+            <span class="client-tag">Активен</span>
+        </div>
+
+        <div class="client-card">
+            <div class="client-avatar">М</div>
+            <div class="client-info">
+                <h3>Мария Смирнова</h3>
+                <p>maria@mail.ru</p>
+            </div>
+            <span class="client-tag new">Новый</span>
+        </div>
+
+    </div>
+
+</main>
+
 </body>
 </html>
