@@ -17,7 +17,6 @@
     --shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
@@ -29,7 +28,6 @@ body {
     line-height: 1.6;
 }
 
-/* Offset for fixed header */
 section {
     scroll-margin-top: 100px;
 }
@@ -110,6 +108,8 @@ section {
     text-decoration: none;
     font-weight: 600;
     transition: 0.25s;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -299,8 +299,106 @@ section {
     margin-bottom: 20px;
 }
 
-.pricing-card ul {
-    list-style: none;
+/* ===============================
+   CLIENTS PAGE
+================================ */
+.clients-page {
+    margin-top: 120px;
+    padding-bottom: 100px;
+}
+
+.clients-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.clients-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.clients-tools {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+    position: sticky;
+    top: 90px;
+    background: var(--bg);
+    padding: 10px 0;
+    z-index: 2;
+}
+
+.clients-search,
+.clients-filter {
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    font-size: 15px;
+    background: #fff;
+}
+
+.clients-search {
+    flex: 1;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.client-card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.client-card:hover {
+    transform: translateY(-4px);
+}
+
+.client-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.client-info h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.client-info p {
+    font-size: 13px;
+    color: #666;
+}
+
+.client-tag {
+    margin-left: auto;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(75,107,251,0.12);
+    color: var(--primary);
+}
+
+.client-tag.new {
+    background: rgba(0,200,100,0.15);
+    color: #0a8f4e;
 }
 
 /* ===============================
@@ -322,31 +420,6 @@ section {
     margin-left: 20px;
     text-decoration: none;
     color: #666;
-}
-
-/* ===============================
-   ANIMATIONS
-================================ */
-.fade-in {
-    animation: fadeIn 1s ease forwards;
-}
-
-.fade-up {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeUp 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
-}
-
-@keyframes fadeUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 /* ===============================
@@ -375,5 +448,15 @@ section {
     .hero-stats {
         flex-direction: column;
         gap: 16px;
+    }
+
+    .clients-header {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .clients-tools {
+        flex-direction: column;
     }
 }
