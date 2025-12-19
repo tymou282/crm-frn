@@ -12,6 +12,7 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
     <div class="container nav-wrapper">
         <a href="#" class="logo">CRMpro</a>
@@ -21,14 +22,15 @@
         </button>
 
         <nav class="nav" id="nav">
-            <a href="#">Возможности</a>
-            <a href="#">Тарифы</a>
-            <a href="#">Контакты</a>
+            <a href="#features">Возможности</a>
+            <a href="#pricing">Тарифы</a>
+            <a href="#contacts">Контакты</a>
             <a href="login.html" class="btn small">Войти</a>
         </nav>
     </div>
 </header>
 
+<!-- HERO -->
 <section class="hero container fade-in">
     <h1>Современная CRM для малого бизнеса</h1>
     <p>Управляйте клиентами, сделками и задачами — быстро, просто и эффективно.</p>
@@ -37,45 +39,95 @@
         <a href="login.html" class="btn big">Войти</a>
     </div>
 
-    <div class="hero-image"></div>
+    <div class="hero-image">
+        <div class="hero-box">
+            <h3>Почему CRMpro?</h3>
+            <ul>
+                <li>✔ Рост продаж до 30%</li>
+                <li>✔ Полный контроль клиентов</li>
+                <li>✔ Автоматизация задач</li>
+                <li>✔ Доступ 24/7</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
-<section class="features container">
+<!-- FEATURES -->
+<section class="features container" id="features">
     <h2>Всё, что нужно вашему бизнесу</h2>
 
     <div class="features-grid">
         <div class="feature-card fade-up">
             <div class="icon">⚡</div>
             <h3>Простой интерфейс</h3>
-            <p>Освоить CRM сможет каждый сотрудник — меньше сопротивления, больше работы.</p>
+            <p>CRM, которую сотрудники освоят за 1 день.</p>
         </div>
 
         <div class="feature-card fade-up">
             <div class="icon">📊</div>
-            <h3>Управление продажами</h3>
-            <p>Воронки, этапы сделок, автоматические напоминания и аналитика.</p>
+            <h3>Продажи</h3>
+            <p>Воронки, сделки и аналитика.</p>
         </div>
 
         <div class="feature-card fade-up">
             <div class="icon">📝</div>
-            <h3>Контроль задач</h3>
-            <p>Календарь, дедлайны, гибкие статусы — всё в одном месте.</p>
+            <h3>Задачи</h3>
+            <p>Контроль дедлайнов и приоритетов.</p>
         </div>
 
         <div class="feature-card fade-up">
             <div class="icon">👥</div>
-            <h3>Работа с клиентами</h3>
-            <p>История, заметки, сегменты, метки — полный контроль над базой.</p>
+            <h3>Клиенты</h3>
+            <p>История, заметки, сегментация.</p>
         </div>
     </div>
 </section>
 
+<!-- PRICING -->
+<section class="pricing container" id="pricing">
+    <h2>Тарифы</h2>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <h3>Базовый</h3>
+            <p><strong>0 ₽</strong></p>
+            <p>До 100 клиентов</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Профи</h3>
+            <p><strong>990 ₽ / месяц</strong></p>
+            <p>Без ограничений</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts container" id="contacts">
+    <h2>Контакты</h2>
+    <p>Email: support@crmpro.ru</p>
+    <p>Телефон: +7 (900) 000-00-00</p>
+</section>
+
+<!-- POLICY -->
+<section class="container" id="policy">
+    <h2>Политика конфиденциальности</h2>
+    <p>Мы не передаём ваши данные третьим лицам.</p>
+</section>
+
+<!-- SUPPORT -->
+<section class="container" id="support">
+    <h2>Поддержка</h2>
+    <p>Свяжитесь с нами: support@crmpro.ru</p>
+</section>
+
+<!-- FOOTER -->
 <footer class="footer">
     <div class="container footer-grid">
-        <p>© 2025 CRM</p>
+        <p>© 2025 CRMpro</p>
         <div class="footer-links">
-            <a href="#">Политика</a>
-            <a href="#">Поддержка</a>
+            <a href="#policy">Политика</a>
+            <a href="#support">Поддержка</a>
         </div>
     </div>
 </footer>
