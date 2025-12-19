@@ -770,7 +770,7 @@ textarea {
   background: rgba(255, 255, 255, 0.15); /* полупрозрачный белый фон */
   padding: 40px 30px;
   border-radius: 20px;
-  color: #fff; /* контрастный цвет текста */
+  color: var(--primary); /* весь текст синий */
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
@@ -802,9 +802,10 @@ textarea {
   content: "✔";
   display: inline-block;
   margin-right: 10px;
-  color: #fff;
+  color: var(--primary); /* галочка тоже синяя */
   font-weight: 700;
 }
+
 
 /* =============================== FLOATING LABEL ================================ */
 .field {
@@ -941,5 +942,6 @@ textarea {
         text-align: center;
     }
 }
+
 
 
