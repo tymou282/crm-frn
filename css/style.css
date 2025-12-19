@@ -766,6 +766,45 @@ textarea {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.login-info {
+  background: rgba(255, 255, 255, 0.15); /* полупрозрачный белый фон */
+  padding: 40px 30px;
+  border-radius: 20px;
+  color: #fff; /* контрастный цвет текста */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.login-info h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.login-info p {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.login-info ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.login-info ul li {
+  margin-bottom: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.login-info ul li::before {
+  content: "✔";
+  display: inline-block;
+  margin-right: 10px;
+  color: #fff;
+  font-weight: 700;
+}
 
 /* =============================== FLOATING LABEL ================================ */
 .field {
@@ -902,4 +941,5 @@ textarea {
         text-align: center;
     }
 }
+
 
