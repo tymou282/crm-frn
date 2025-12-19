@@ -460,3 +460,363 @@ section {
         flex-direction: column;
     }
 }
+/* ===============================
+   ЗАДАЧИ — СТРАНИЦА
+================================ */
+
+body.login-page {
+    background: var(--bg);
+    font-family: 'Inter', system-ui, sans-serif;
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+.login-card {
+    background: var(--card);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 40px 36px;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.login-card h2 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+.login-subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 24px;
+}
+
+.field input[type="text"],
+.field input[type="date"],
+.field textarea,
+.field select {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 44px;
+}
+
+.field input[type="text"]:focus,
+.field input[type="date"]:focus,
+.field textarea:focus,
+.field select:focus {
+    border-color: var(--primary);
+}
+
+.field label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    background: var(--card);
+    padding: 0 6px;
+    color: #999;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.3s ease all;
+    user-select: none;
+}
+
+.field input:not(:placeholder-shown) + label,
+.field textarea:not(:placeholder-shown) + label,
+.field select:not([value=""]) + label,
+.field input:focus + label,
+.field textarea:focus + label,
+.field select:focus + label {
+    top: -8px;
+    font-size: 12px;
+    color: var(--primary);
+}
+
+textarea {
+    min-height: 80px;
+    font-family: inherit;
+}
+
+.btn.login-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+#task_list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Карточка задачи */
+.task-card {
+    background: var(--bg);
+    border-radius: 16px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-left: 6px solid transparent;
+    transition: border-color 0.3s ease;
+    cursor: default;
+}
+
+.task-card.new {
+    border-left-color: #0a8f4e; /* зеленый */
+}
+
+.task-card.in-progress {
+    border-left-color: #4b6bfb; /* синий */
+}
+
+.task-card.done {
+    border-left-color: #999;
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.task-title {
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--text);
+}
+
+.task-desc {
+    font-size: 14px;
+    color: #555;
+    white-space: pre-wrap;
+}
+
+.task-meta {
+    font-size: 13px;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-meta span {
+    font-weight: 500;
+}
+
+/* Футер с кнопками */
+.login-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.login-footer .btn {
+    padding: 10px 22px;
+    font-size: 14px;
+    border-radius: 12px;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптив */
+@media (max-width: 640px) {
+    .login-card {
+        padding: 30px 24px;
+    }
+
+    .login-footer {
+        flex-direction: column;
+    }
+
+    .login-footer .btn {
+        width: 100%;
+    }
+}
+/* =============================== LOGIN PAGE ================================ */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4b6bfb, #6f86ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--card);
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.login-card h1,
+.login-card h2 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.login-card h1 {
+  font-size: 28px;
+}
+
+.login-card h2 {
+  font-size: 26px;
+}
+
+.login-subtitle {
+  color: #666;
+  margin: 10px 0 30px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.login-back {
+  display: block;
+  margin-top: 24px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* =============================== LOGIN PAGE — PRO ================================ */
+.login-layout {
+  width: min(1100px, 95%);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.login-info {
+  color: #fff;
+}
+
+.login-info h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.login-info p {
+  font-size: 20px;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.login-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.login-info li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* =============================== FLOATING LABEL ================================ */
+.field {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.field input {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  background: transparent;
+}
+
+.field label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--card);
+  padding: 0 6px;
+  color: #777;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.field input:focus,
+.field input:not(:placeholder-shown) {
+  border-color: var(--primary);
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label {
+  top: -6px;
+  font-size: 12px;
+  color: var(--primary);
+}
+
+/* =============================== PASSWORD TOGGLE ================================ */
+.field.password {
+  position: relative;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
