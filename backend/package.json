@@ -13,4 +13,9 @@
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.10.0"
   }
+  "scripts": {
+  "start": "node ./server.js"
 }
+}
+
+
